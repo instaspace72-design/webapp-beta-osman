@@ -97,7 +97,7 @@ var Onboard = {
     var self=this, el=this.el;
     el.querySelectorAll('[data-on]').forEach(function(b){ b.addEventListener('click', function(){
       var a=b.getAttribute('data-on');
-      if(a==='next'){ self.step++; self.render(); }
+      if(a==='next'){if(self.step===0&&window.EmailDB){var em=self.el.querySelector('input[type=email]');if(em&&em.value)EmailDB.add(em.value,'signup',self.role);} self.step++; self.render(); }
       else if(a==='login'){ self.el.remove(); self.el=null; Store.onboarded=true; Store.save(); App.enter(self.role); }
       else if(a==='finish'){ self.done(); }
     });});
