@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>InstaSpace — Web App</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800&family=Space+Mono:wght@400;700&family=Noto+Sans+Arabic:wght@400;500;700;800&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="webapp.css">
+</head>
+<body>
+
+<!-- landing (logo animation) -->
+<div class="wa-landing" id="landing"></div>
+
+<!-- app shell (built by JS) -->
+<div class="wa-shell" id="shell"></div>
+
+<!-- tweaks -->
+<button class="tweaks-fab" id="tweaksFab" aria-label="Tweaks">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"></path><circle cx="16" cy="7" r="2"></circle><circle cx="8" cy="17" r="2"></circle></svg>
+</button>
+<div class="tweaks" id="tweaks"></div>
+
+<!-- toast -->
+<div id="toast"></div>
+
+<script src="platform-prefs.js"></script>
+<script src="wa-data.js"></script>
+<script src="wa-ui.js"></script>
+<script src="payfast.js"></script>
+<script src="wa-views-core.js"></script>
+<script src="wa-views-browse.js"></script>
+<script src="wa-views-host.js"></script>
+<script src="wa-app.js"></script>
+</body>
+</html>

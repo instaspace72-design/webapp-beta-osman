@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark" data-density="comfortable">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>InstaSpace — Platform</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700;1,800&family=Space+Mono:wght@400;700&family=Noto+Sans+Arabic:wght@400;500;700;800&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="platform.css">
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="#top" aria-label="InstaSpace">
+      <span class="mark"><img src="assets/icon_cream.png" alt=""></span>
+      <span class="wm">Insta<span class="sp">Space</span></span>
+    </a>
+    <div class="top-spacer"></div>
+    <div class="pref-row">
+      <!-- language -->
+      <div class="menu-wrap" id="langWrap">
+        <button class="pill-btn" id="langBtn" aria-haspopup="true">
+          <span class="flag" id="langFlag">EN</span>
+          <span class="lab" id="langLab">English</span>
+          <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="menu" id="langMenu"><div class="menu-head" data-i18n="language">Language</div></div>
+      </div>
+      <!-- currency -->
+      <div class="menu-wrap" id="curWrap">
+        <button class="pill-btn" id="curBtn" aria-haspopup="true">
+          <span id="curSym" style="font-weight:800">$</span>
+          <span class="lab" id="curCode">USD</span>
+          <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="menu" id="curMenu"><div class="menu-head" data-i18n="currency">Currency</div></div>
+      </div>
+      <!-- theme -->
+      <button class="pill-btn icon-only" id="themeBtn" aria-label="Theme">
+        <svg id="themeIcon" viewBox="0 0 24 24"></svg>
+      </button>
+      <a class="signin-link" href="InstaSpace Web App.html" data-i18n="signIn">Sign in</a>
+    </div>
+  </div>
+</header>
+
+<a id="top"></a>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" style="padding-top:clamp(48px,7vw,96px)">
+  <div class="hero-grid"></div>
+  <div class="hero-in">
+    <div class="hero-eye eyebrow"><span class="dot"></span><span>Beta</span></div>
+    <h1 class="reveal">Every verified space, <span class="it">settled the moment</span> it's proven.</h1>
+    <p class="hero-sub reveal" data-i18n="subtag"></p>
+    <div class="hero-cta reveal">
+      <a class="btn btn-primary lg" href="InstaSpace Web App.html?role=guest"><span data-i18n="getStarted">Get started</span><svg class="arr" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-ghost lg" href="#workspaces" data-i18n="howItWorks">How it works</a>
+    </div>
+    <div class="trust-strip reveal">
+      <span class="ts"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4-3 7-7 8-4-1-7-4-7-8V6z"/><path d="M9 11.5l2 2 4-4.5"/></svg><span data-i18n="instapass">InstaPass</span></span>
+      <span class="ts"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4-3 7-7 8-4-1-7-4-7-8V6z"/></svg><span data-i18n="govshield">GovShield</span></span>
+      <span class="ts"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 10h18"/></svg><span data-i18n="wallet">Wallet & Settlement</span></span>
+      <span class="ts"><svg viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg><span data-i18n="aiyield">AI-Yield</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HOW IT WORKS ===================== -->
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow" data-i18n="howItWorks">How it works</div>
+      <h2 data-i18n="tagline"></h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="n">01</div><h4 data-i18n="step1"></h4><p data-i18n="step1d"></p></div>
+      <div class="step reveal"><div class="n">02</div><h4 data-i18n="step2"></h4><p data-i18n="step2d"></p></div>
+      <div class="step reveal"><div class="n">03</div><h4 data-i18n="step3"></h4><p data-i18n="step3d"></p></div>
+      <div class="step reveal"><div class="n">04</div><h4 data-i18n="step4"></h4><p data-i18n="step4d"></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SPACE TYPES ===================== -->
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">01 — 02 — 03</div>
+      <h2 data-i18n="everyType">Every type of space</h2>
+    </div>
+    <div class="types">
+      <div class="type reveal"><div class="ph"></div><div class="ph2"></div><span class="phtag mono">photo · residential</span><h4 data-i18n="residential">Residential</h4><p data-i18n="residentialD"></p></div>
+      <div class="type reveal"><div class="ph"></div><div class="ph2"></div><span class="phtag mono">photo · commercial</span><h4 data-i18n="commercial">Commercial</h4><p data-i18n="commercialD"></p></div>
+      <div class="type reveal"><div class="ph"></div><div class="ph2"></div><span class="phtag mono">photo · industrial</span><h4 data-i18n="industrial">Industrial</h4><p data-i18n="industrialD"></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WORKSPACE LAUNCHER ===================== -->
+<section class="band" id="workspaces">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow" data-i18n="choose">Choose your workspace</div>
+      <h2 data-i18n="choose">Choose your workspace</h2>
+      <p data-i18n="chooseSub"></p>
+    </div>
+    <div class="ws-grid">
+      <a class="ws-card reveal" href="InstaSpace Web App.html?role=guest">
+        <div class="corner"></div>
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M16 16l4 4"/></svg></div>
+        <h3 data-i18n="guest">Guest</h3>
+        <div class="tag mono">Web app · book</div>
+        <p data-i18n="guestDesc"></p>
+        <span class="go"><span data-i18n="enter">Enter</span><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="ws-card reveal" href="InstaSpace Web App.html?role=host">
+        <div class="corner"></div>
+        <div class="ic"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="1.5"/><path d="M9 7h.01M12 7h.01M15 7h.01M9 11h.01M12 11h.01M15 11h.01M10 21v-4h4v4"/></svg></div>
+        <h3 data-i18n="host">Host</h3>
+        <div class="tag mono">Web app · list & earn</div>
+        <p data-i18n="hostDesc"></p>
+        <span class="go"><span data-i18n="enter">Enter</span><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="ws-card reveal" href="PM Portal.html">
+        <div class="corner"></div>
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0112 0"/><path d="M16 5.5a3 3 0 010 5.8M21 20a6 6 0 00-5-5.9"/></svg></div>
+        <h3 data-i18n="manager">Property Manager</h3>
+        <div class="tag mono">Operator portal</div>
+        <p data-i18n="managerDesc"></p>
+        <span class="go"><span data-i18n="open">Open</span><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="ws-card reveal" href="InstaSpace Admin.html">
+        <div class="corner"></div>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4-3 7-7 8-4-1-7-4-7-8V6z"/><path d="M9 11.5l2 2 4-4.5"/></svg></div>
+        <h3 data-i18n="admin">Admin & Ops</h3>
+        <div class="tag mono">Trust & compliance</div>
+        <p data-i18n="adminDesc"></p>
+        <span class="go"><span data-i18n="open">Open</span><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LINKED MODULES ===================== -->
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow" data-i18n="modules">Linked modules</div>
+      <h2 data-i18n="modules">Linked modules</h2>
+      <p data-i18n="modulesSub"></p>
+    </div>
+    <div class="mod-grid">
+      <div class="mod reveal"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5 20a7 7 0 0114 0"/></svg></div><div><h4 data-i18n="instapass">InstaPass</h4><p data-i18n="instapassD"></p></div></div>
+      <div class="mod reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4-3 7-7 8-4-1-7-4-7-8V6z"/></svg></div><div><h4 data-i18n="govshield">GovShield</h4><p data-i18n="govshieldD"></p></div></div>
+      <div class="mod reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 16l3-4 3 2 4-6"/></svg></div><div><h4 data-i18n="aiyield">AI-Yield</h4><p data-i18n="aiyieldD"></p></div></div>
+      <div class="mod reveal"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 10h18"/><circle cx="16.5" cy="13.5" r="1.3"/></svg></div><div><h4 data-i18n="wallet">Wallet & Settlement</h4><p data-i18n="walletD"></p></div></div>
+      <div class="mod reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M14 4l6 6-3 3-6-6z"/><path d="M11 7L4 14l3 3 7-7"/><path d="M3 21h10"/></svg></div><div><h4 data-i18n="disputes">Disputes</h4><p data-i18n="disputesD"></p></div></div>
+      <div class="mod reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg></div><div><h4 data-i18n="auditor">AI-Auditor</h4><p data-i18n="auditorD"></p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="foot-in">
+    <div class="brand">
+      <span class="mark" style="height:22px"><img src="assets/icon_cream.png" alt="" style="height:22px"></span>
+      <span class="wm" style="font-size:18px">Insta<span class="sp">Space</span></span>
+    </div>
+    <div class="legal">Insta Space · Trust &amp; settlement infrastructure</div>
+  </div>
+</footer>
+
+<script src="platform-prefs.js"></script>
+<template id="__bundler_thumbnail">
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100" height="100" fill="#120822"/>
+  <g transform="translate(30,30)" fill="none" stroke="#F2622E" stroke-width="5" stroke-linecap="round">
+    <rect x="0" y="0" width="40" height="40" rx="20"/>
+    <path d="M8 32 L32 8" stroke="#F5EFE8"/>
+  </g>
+</svg>
+</template>
+<script>
+(function(){
+  var t = ISPrefs.t.bind(ISPrefs);
+
+  /* ----- apply translations to all [data-i18n] ----- */
+  function applyI18n(){
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      el.textContent = t(el.getAttribute('data-i18n'));
+    });
+    // brand mark stays; update buttons
+    var lm = ISPrefs.langMeta(), cm = ISPrefs.curMeta();
+    document.getElementById('langFlag').textContent = lm.flag;
+    document.getElementById('langLab').textContent = lm.native;
+    document.getElementById('curSym').textContent = cm.sym.trim();
+    document.getElementById('curCode').textContent = cm.code;
+    // RTL font hint for Arabic/Urdu
+    var p = ISPrefs.get();
+    var arabicFont = (p.lang==='ar') ? "'Noto Sans Arabic',":(p.lang==='ur') ? "'Noto Nastaliq Urdu',":"";
+    document.body.style.fontFamily = arabicFont + "'Urbanist',system-ui,sans-serif";
+    // theme icon
+    setThemeIcon();
+    document.title = 'InstaSpace — Platform';
+  }
+
+  var sun = '<circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M19.4 4.6l-1.7 1.7M6.3 17.7l-1.7 1.7"/>';
+  var moon = '<path d="M20 14.5A8 8 0 119.5 4a6.4 6.4 0 0010.5 10.5z"/>';
+  function setThemeIcon(){
+    var dark = ISPrefs.get().theme==='dark';
+    var ic = document.getElementById('themeIcon');
+    ic.setAttribute('fill','none'); ic.setAttribute('stroke','currentColor'); ic.setAttribute('stroke-width','1.9');
+    ic.setAttribute('stroke-linecap','round'); ic.setAttribute('stroke-linejoin','round');
+    ic.innerHTML = dark ? sun : moon;
+  }
+
+  /* ----- build language menu ----- */
+  var langMenu = document.getElementById('langMenu');
+  ISPrefs.LANGS.forEach(function(L){
+    var a = document.createElement('button');
+    a.className = 'menu-item' + (ISPrefs.get().lang===L.code?' on':'');
+    a.setAttribute('data-lang', L.code);
+    a.innerHTML = '<span class="native">'+L.native+'</span><span class="meta">'+L.flag+(L.dir==='rtl'?' · RTL':'')+'</span>';
+    a.addEventListener('click', function(){ ISPrefs.set({lang:L.code}); closeMenus(); });
+    langMenu.appendChild(a);
+  });
+  /* ----- build currency menu ----- */
+  var curMenu = document.getElementById('curMenu');
+  ISPrefs.CURRENCIES.forEach(function(C){
+    var a = document.createElement('button');
+    a.className = 'menu-item' + (ISPrefs.get().currency===C.code?' on':'');
+    a.setAttribute('data-cur', C.code);
+    a.innerHTML = '<span style="font-weight:800;width:30px">'+C.sym.trim()+'</span><span class="native">'+C.code+'</span><span class="meta">'+C.name+'</span>';
+    a.addEventListener('click', function(){ ISPrefs.set({currency:C.code}); closeMenus(); });
+    curMenu.appendChild(a);
+  });
+
+  function markMenu(menu, attr, val){
+    menu.querySelectorAll('.menu-item').forEach(function(it){ it.classList.toggle('on', it.getAttribute(attr)===val); });
+  }
+  function closeMenus(){ document.querySelectorAll('.menu').forEach(function(m){ m.classList.remove('open'); }); }
+  function toggleMenu(m){ var was=m.classList.contains('open'); closeMenus(); if(!was) m.classList.add('open'); }
+
+  document.getElementById('langBtn').addEventListener('click', function(e){ e.stopPropagation(); toggleMenu(langMenu); });
+  document.getElementById('curBtn').addEventListener('click', function(e){ e.stopPropagation(); toggleMenu(curMenu); });
+  document.getElementById('themeBtn').addEventListener('click', function(){ ISPrefs.set({theme: ISPrefs.get().theme==='dark'?'light':'dark'}); });
+  document.addEventListener('click', closeMenus);
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeMenus(); });
+  document.querySelectorAll('.menu').forEach(function(m){ m.addEventListener('click', function(e){ e.stopPropagation(); }); });
+
+  ISPrefs.onChange(function(){
+    applyI18n();
+    markMenu(langMenu,'data-lang',ISPrefs.get().lang);
+    markMenu(curMenu,'data-cur',ISPrefs.get().currency);
+  });
+
+  applyI18n();
+
+  /* ----- reveal on scroll (with guaranteed fallback) ----- */
+  function revealAll(){ document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); }); }
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } }); }, {threshold:.08, rootMargin:'0px 0px -5% 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+    // fallback: if the harness/IO never fires, ensure everything is visible
+    window.addEventListener('load', function(){ setTimeout(revealAll, 300); });
+    setTimeout(revealAll, 1200);
+  } else { revealAll(); }
+})();
+</script>
+</body>
+</html>
