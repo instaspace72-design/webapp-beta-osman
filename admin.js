@@ -20,7 +20,8 @@ var NAV = [
   ['overview','Overview','home'],
   ['verification','Verification','shieldcheck'],
   ['disputes','Disputes','gavel'],
-  ['compliance','Compliance','shield']
+  ['compliance','Compliance','shield'],
+	['emails','Emails','user']
 ];
 
 var Views = {};
@@ -290,6 +291,34 @@ var App = {
   },
   applyTweaks:function(){ var t=ADMIN.tweaks; document.body.classList.toggle('compact', t.density==='compact'); document.documentElement.classList.toggle('noanim', !t.motion); }
 };
+
+/* ---- Emails view ---- */
+Views.emails = function(){
+  var db = window.EmailDB ? window.EmailDB.list() : [];
+  var rows = db.length ? db.map(function(r){
+    var d = r.timestamp ? r.timestamp.replace('T',' ').slice(0,19) : '';
+    return '<tr><td>'+r.email+'</td><td>'+r.source+'</td><td>'+r.role+'</td><td class="mono" style="font-size:12px">'+d+'</td></tr>';
+  }).join('') : '<tr><td colspan="4" style="text-align:center;color:var(--cream-40);padding:24px">No emails collected yet.</td></tr>';
+  return { title:'Emails', sub:'Beta sign-ups', wide:true, html:
+    '<div class="page-head"><h1>Beta email list</h1>'+
+    '<div class="muted" style="font-size:14px;margin-top:4px">'+db.length+' email'+(db.length===1?'':'s')+' collected from sign-up forms.</div></div>'+
+    '<div style="display:flex;gap:12px;margin-bottom:18px">'+
+    '<button class="btn btn-primary" id="adm-email-dl">Export CSV</button>'+
+    '<button class="btn btn-danger" id="adm-email-clr">Clear all</button></div>'+
+    '<div class="panel"><table style="width:100%;border-collapse:collapse">'+
+    '<thead><tr style="border-bottom:1px solid var(--cream-08)"><th style="text-align:left;padding:10px 18px;font-size:12px;color:var(--cream-56)">Email</th><th style="text-align:left;padding:10px 18px;font-size:12px;color:var(--cream-56)">Source</th><th style="text-align:left;padding:10px 18px;font-size:12px;color:var(--cream-56)">Role</th><th style="text-align:left;padding:10px 18px;font-size:12px;color:var(--cream-56)">Date</th></tr></thead>'+
+    '<tbody>'+rows+'</tbody></table></div>',
+    mount:function(root){
+      var dl=root.querySelector('#adm-email-dl');
+      if(dl) dl.addEventListener('click',function(){ if(window.EmailDB) EmailDB.downloadCSV(); });
+      var clr=root.querySelector('#adm-email-clr');
+      if(clr) clr.addEventListener('click',function(){
+        if(window.EmailDB){ EmailDB.clear(); App.refresh(); }
+      });
+    }
+  };
+};
+
 window.App = App;
 document.addEventListener('DOMContentLoaded', function(){ App.boot(); });
 })();
